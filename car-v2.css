@@ -24,7 +24,7 @@
     font-size: xx-large;
 }
 
-.body{
+.cars{
     display: grid;
     place-content: center;
     min-height: 100vh;
