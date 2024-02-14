@@ -114,13 +114,35 @@ body{
     transition-delay: 400ms;
 }
 
-#information{
+.information1{
     font-family: "Noto Serif Display", serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
     font-variation-settings:
       "wdth" 100;
+    background-color: aqua;
+    position: relative;
+    transition: all 1s;
+    animation: rotate 5s linear infinite;
 }
 
+.carimg{
+    position: relative;
+    transition: all 1s;
+    animation: rotate 5s linear infinite;
+    left: -8000px;
+    z-index: 1;
+}
+
+.title718{
+    top: 0px;
+    z-index: 2;
+    font-size:250%;
+    color: #e9ecef;
+    position: relative;
+    transition: all 1s;
+    animation: rotate 5s linear infinite;
+    right: -8000px;
+}
 
