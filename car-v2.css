@@ -26,14 +26,27 @@ body{
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#title{
-    font-size: xx-large;
+#title {
+    font-size: 5vw; /* Default font size based on viewport width */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #title {
+        font-size: 6vw; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 480px) {
+    #title {
+        font-size: 8vw; /* Further adjust font size for very small screens */
+    }
 }
 
 .cars{
     display: grid;
     place-content: center;
-    min-height: 100vh;
     background: #363535;
     overflow: hidden;
 }
@@ -127,7 +140,7 @@ body{
     font-style: normal;
     font-variation-settings:
       "wdth" 100;
-    background-color: #b52c2c;
+    background-color: #363535;
     position: relative;
     transition: all 1s;
     animation: rotate 5s linear infinite;
