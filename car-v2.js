@@ -6,9 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     boxes.forEach(function(box) {
         box.addEventListener('click', function() {
+            information.style.display = 'block';
             information.scrollIntoView({ behavior: 'smooth', block: 'start' });
             carimg.style.left = '0px';
-            title718.style.left = '100px';
+            title718.style.left = '0px';
+            
         });
     });
 });

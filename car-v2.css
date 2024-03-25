@@ -35,6 +35,7 @@ body{
     place-content: center;
     min-height: 100vh;
     background: #363535;
+    overflow: hidden;
 }
 
 
@@ -47,6 +48,9 @@ body{
     height: 500px;
     transition: all 400ms;
     opacity: 1;
+    max-width: calc(100% - 40px); /* Ensure container doesn't exceed 100% width minus 40px */
+    max-height: calc(100% - 40px); /* Ensure container doesn't exceed 100% height minus 40px */
+    overflow: hidden; /* Clip any content that overflows */
 }
 
 .container:hover .box {
@@ -61,6 +65,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .container .box:hover {
@@ -123,18 +128,13 @@ body{
     font-style: normal;
     font-variation-settings:
       "wdth" 100;
-    background-color: #363535;
+    background-color: #b52c2c;
     position: relative;
     transition: all 1s;
     animation: rotate 5s linear infinite;
-}
-
-.carimg{
-    position: relative;
-    transition: all 1s;
-    animation: rotate 5s linear infinite;
-    left: -8000px;
-    z-index: 1;
+    display: none;
+    overflow: hidden; /* Clip any content that overflows */
+    padding: 20px;
 }
 
 .title718{
@@ -145,7 +145,23 @@ body{
     position: relative;
     transition: all 1s;
     animation: rotate 5s linear infinite;
-    right: -8000px;
+    top: 20px;
+    left: -8000px;
+    max-width: calc(100% - 40px); /* Ensure image doesn't exceed container width */
+    max-height: calc(100% - 40px);
 }
+
+.carimg{
+    position: relative;
+    transition: all 1s;
+    animation: rotate 5s linear infinite;
+    left: -8000px;
+    z-index: 1;
+    bottom: 20px;
+    max-width: calc(100% - 40px); /* Ensure image doesn't exceed container width */
+    max-height: calc(100% - 40px);
+}
+
+
 
 
