@@ -65,7 +65,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .container .box:hover {
@@ -137,7 +136,7 @@ body{
     padding: 20px;
 }
 
-.title718{
+.carstitles{
     top: 0px;
     z-index: 2;
     font-size:250%;
