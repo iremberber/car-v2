@@ -1,41 +1,54 @@
 document.addEventListener('DOMContentLoaded', function() {
     var boxes = document.querySelectorAll('.box');
-    var information = document.querySelector('.information1');
-    var title718 = document.querySelector('.carstitles');
-    var img718 = document.querySelector('.carimg');
+    var information1 = document.querySelector('.information1');
+    var information2 = document.querySelector('.information2');
+    var information3 = document.querySelector('.information3');
+    var information4 = document.querySelector('.information4');
+    var information5 = document.querySelector('.information5');
+    var cartitle1 = document.querySelector('.carstitle1');
+    var cartitle2 = document.querySelector('.carstitle2');
+    var cartitle3 = document.querySelector('.carstitle3');
+    var cartitle4 = document.querySelector('.carstitle4');
+    var cartitle5 = document.querySelector('.carstitle5');
+    var carimg1 = document.querySelector('.carimg1');
+    var carimg2 = document.querySelector('.carimg2');
+    var carimg3 = document.querySelector('.carimg3');
+    var carimg4 = document.querySelector('.carimg4');
+    var carimg5 = document.querySelector('.carimg5');
 
-    boxes.forEach(function(box) {
+    boxes.forEach(function(box, index) {
         box.addEventListener('click', function() {
-            information.style.display = 'block';
-            information.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            img718.style.left = '0px';
-            title718.style.left = '5%';
-
-            var dataText = box.getAttribute('data-text');
-
-            switch (dataText) {
-                case '718':
-                    img718.src = 'https://newsroom.porsche.com/dam/jcr:a388376a-c5e2-4363-939b-6fbacd867a64/718_neu_2023.png';
-                    title718.textContent = '718';
+            switch (index) {
+                case 0:
+                    information1.style.display = 'block';
+                    information1.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    carimg1.style.left = '0px';
+                    cartitle1.style.left = '5%';
                     break;
-                case '911':
-                    img718.src = 'https://newsroom.porsche.com/dam/jcr:299c5b34-b460-49c8-9310-443ecb93ca38/911_neu_2023.png';
-                    title718.textContent = '911';
+                case 1:
+                    information2.style.display = 'block';
+                    information2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    carimg2.style.left = '0px';
+                    cartitle2.style.left = '5%';
                     break;
-                case 'Taycan':
-                    img718.src = 'https://newsroom.porsche.com/dam/jcr:8e32629f-330d-4e0a-aa0d-975358993b8a/Taycan%202024.png';
-                    title718.textContent = 'Taycan';
+                case 2:
+                    information3.style.display = 'block';
+                    information3.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    carimg3.style.left = '0px';
+                    cartitle3.style.left = '5%';
                     break;
-                case 'Panamera':
-                    img718.src = 'https://newsroom.porsche.com/dam/jcr:8ae73722-6633-4283-917a-a53678500620/Panamera%202024.png';
-                    title718.textContent = 'Panamera';
+                case 3:
+                    information4.style.display = 'block';
+                    information4.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    carimg4.style.left = '0px';
+                    cartitle4.style.left = '5%';
                     break;
-                case 'Macan':
-                    img718.src = 'https://newsroom.porsche.com/dam/jcr:17851357-84af-4c6e-ac95-cb5910b3ee0a/Macan%20Electric%202024.png';
-                    title718.textContent = 'Macan';
+                case 4:
+                    information5.style.display = 'block';
+                    information5.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    carimg5.style.left = '0px';
+                    cartitle5.style.left = '5%';
                     break;
-                default:
-                    img718.src = ''; 
             }
         });
     });
