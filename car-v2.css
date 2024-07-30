@@ -45,7 +45,7 @@ body{
     }
 }
 
-.cars{
+.cars {
     display: grid;
     place-content: center;
     background: #363535;
@@ -53,23 +53,22 @@ body{
     margin-top: 15px;
 }
 
-
 .container {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 1em;
-    width: 800px;
-    height: 500px;
+    width: 80vw; /* Use vw for responsive width */
+    max-width: 1000px; /* Optional: limit the maximum width */
+    height: calc(80vw * 0.625); /* Maintain aspect ratio based on the width (500/800 = 0.625) */
+    max-height: calc(1000px * 0.625); /* Optional: maintain aspect ratio for the max width */
     transition: all 400ms;
     opacity: 1;
-    max-width: calc(100% - 40px); /* Ensure container doesn't exceed 100% width minus 40px */
-    max-height: calc(100% - 40px); /* Ensure container doesn't exceed 100% height minus 40px */
-    overflow: hidden; /* Clip any content that overflows */
+    overflow: hidden;
 }
 
 .container:hover .box {
-    filter: grayscale(100%) opacity(24%)
+    filter: grayscale(100%) opacity(24%);
 }
 
 .box {
@@ -115,7 +114,7 @@ body{
     transform: translateY(-16px);
 }
 
-.box::after{
+.box::after {
     content: attr(data-text);
     position: absolute;
     bottom: 20px;
@@ -135,58 +134,50 @@ body{
     transition-delay: 400ms;
 }
 
-.information{
+.information {
     font-family: "Noto Serif Display", serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
+    font-variation-settings: "wdth" 100;
     background-color: #363535;
-    position: relative;
-    transition: all 1s;
-    animation: rotate 5s linear infinite;
+    position: absolute;
+    transition: opacity 2s, left 2s;
     display: none;
-    overflow: hidden; 
+    overflow: hidden;
     padding: 20px;
 }
 
-.carstitles{
-    top: 0px;
-    z-index: 2;
-    font-size:40px;
-    color: #e9ecef;
+.carstitles, .carimg {
+    transition: left 1s ease, opacity 1s ease;
     position: relative;
-    transition: all 1s;
-    animation: rotate 5s linear infinite;
-    top: 20px;
+    left: -8000px;
+    opacity: 0;
+}
+
+.carstitles {
+    font-size: 40px;
+    color: #e9ecef;
+}
+
+.carimg {
+    max-width: calc(100% - 40px);
+    max-height: calc(100% - 40px);
+}
+
+.information1, .information2, .information3, .information4, .information5 {
+    opacity: 0;
     left: -8000px;
 }
 
 @media (max-width: 768px) {
     .carstitles {
-        font-size: 45px; 
+        font-size: 35px;
     }
 }
-
 
 @media (max-width: 480px) {
     .carstitles {
-        font-size: 40px; 
+        font-size: 30px;
     }
 }
-
-.carimg{
-    position: relative;
-    transition: all 1s;
-    animation: rotate 5s linear infinite;
-    left: -8000px;
-    z-index: 1;
-    bottom: 20px;
-    max-width: calc(100% - 40px); 
-    max-height: calc(100% - 40px);
-}
-
-
-
-
